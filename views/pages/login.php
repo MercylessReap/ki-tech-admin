@@ -9,22 +9,22 @@
     <!-- ============================================================== -->
     <!-- Main wrapper - style you can find in pages.scss -->
     <!-- ============================================================== -->
-    <section id="wrapper" class="login-register login-sidebar" style="background-image:url(./public/img/backgrounds/login.jpg);">
+  <section id="wrapper" class="login-register login-sidebar" style="background-image:url(./public/img/backgrounds/login.jpg);">
   <div class="login-box card">
     <div class="card-body">
-      <form class="form-horizontal form-material" id="loginform" action="dashboard.php">
+      <form class="form-horizontal form-material" id="loginform" action="show.php" method="post">
         <a href="javascript:void(0)" class="text-center db">
           <img src="./public/img/logo-icon.png" alt="Home" style="height: 30px;width: 30px;"><br>
           <img src="./public/img/logo-text.png" alt="Home" style="height: 20px;">
         </a>
         <div class="form-group m-t-40">
           <div class="col-xs-12">
-            <input class="form-control" type="text" required="" placeholder="Username">
+            <input class="form-control" type="text" required="" name="email" placeholder="Username/Email">
           </div>
         </div>
         <div class="form-group">
           <div class="col-xs-12">
-            <input class="form-control" type="password" required="" placeholder="Password">
+            <input class="form-control" type="password" required="" name="password" placeholder="Password">
           </div>
         </div>
         <div class="form-group">
@@ -37,6 +37,7 @@
         </div>
         <div class="form-group text-center m-t-20">
           <div class="col-xs-12">
+            <input hidden type="text" name="t" value="login"/>
             <button class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" type="submit">Log In</button>
           </div>
         </div>
@@ -59,6 +60,7 @@
         </div>
         <div class="form-group text-center m-t-20">
           <div class="col-xs-12">
+            <input hidden type="text" name="t" value="login"/>
             <button class="btn btn-primary btn-lg btn-block text-uppercase waves-effect waves-light" type="submit">Reset</button>
           </div>
         </div>

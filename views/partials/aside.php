@@ -10,10 +10,10 @@
             <div class="profile-img"> <img src="./public/img/users/1.png" alt="user" /> </div>
             <!-- User profile text-->
             <div class="profile-text">
-              <a href="#" class="dropdown-toggle u-dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"><?php echo($currentUser['name'][0]['first'].' '.$currentUser['name'][0]['last']); ?></a>
+              <a href="#" class="dropdown-toggle u-dropdown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"><?php echo($_SESSION['firstname'].' '.$_SESSION['lastname']); ?></a>
               <div class="dropdown-menu animated flipInY">
-                <a href="#" class="dropdown-item"><i class="ti-user"></i> My Profile</a>
-                <a href="#" class="dropdown-item"><i class="ti-wallet"></i> My Wage</a>
+                <a href="./profile.php?<?php echo ($_SESSION['uid']);?>" class="dropdown-item"><i class="ti-user"></i> My Profile</a>
+                <a href="#" class="dropdown-item"><i class="ti-wallet"></i> My Wage </a>
                 <a href="#" class="dropdown-item"><i class="ti-email"></i> Inbox</a>
                 <div class="dropdown-divider"></div>
                 <a href="#" class="dropdown-item"><i class="ti-settings"></i> Account Setting</a>

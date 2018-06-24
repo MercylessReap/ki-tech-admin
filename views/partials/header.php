@@ -1,3 +1,4 @@
+<?php if(!check_cookie()){header('Location:../?err=1');}; ?>
 <!-- ============================================================== -->
 <!-- Topbar header - style you can find in pages.scss -->
 <!-- ============================================================== -->
@@ -341,20 +342,20 @@
                                 <div class="dw-user-box">
                                     <div class="u-img"><img src="./public/img/users/1.png" alt="user"></div>
                                     <div class="u-text">
-                                      <h4><?php echo($currentUser['username']); ?></h4>
-                                      <p class="text-muted"><?php echo($currentUser['name'][0]['first'].' '.$currentUser['name'][0]['last']); ?></p>
-                                      <a href="profile.php" class="btn btn-rounded btn-danger btn-sm">View Profile</a>
+                                      <h4><?php echo($_SESSION['username']); ?></h4>
+                                      <p class="text-muted"><?php echo($_SESSION['firstname'].' '.$_SESSION['lastname']); ?></p>
+                                      <a href="./profile.php?<?php echo ($_SESSION['uid']);?>" class="btn btn-rounded btn-danger btn-sm">View Profile</a>
                                     </div>
                                 </div>
                             </li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="#"><i class="ti-user"></i> My Profile</a></li>
+                            <li><a href="./profile.php?<?php echo ($_SESSION['uid']);?>"><i class="ti-user"></i> My Profile</a></li>
                             <li><a href="#"><i class="ti-wallet"></i> My Wage</a></li>
                             <li><a href="#"><i class="ti-email"></i> Inbox</a></li>
                             <li role="separator" class="divider"></li>
                             <li><a href="#"><i class="ti-settings"></i> Account Setting</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="#"><i class="fa fa-power-off"></i> Logout</a></li>
+                            <li><a href="./logout.php"><i class="fa fa-power-off"></i> Logout</a></li>
                         </ul>
                     </div>
                 </li>
